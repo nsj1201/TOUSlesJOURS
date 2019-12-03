@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TOUSlesJOURS</title>
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="images/favicon.png">
+    <!-- 웹폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800|Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">    <!-- css -->
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+    <style>
+        #wrap{width:100%;}
+        /* header-mobile */
+        .mobile_header{background:white;display:flex;width:82%;justify-content:space-between;align-items:center;}
+        .mobile_header a{display:flex;height:65px;}
+        .mobile_header a:nth-child(1){width:57px;height:70px;display:flex;}
+        .mobile_header a:nth-child(1) img{width:100%;}
+
+        .mobile_header a:nth-child(2){width:146px;height:21px;}
+        .mobile_header a:nth-child(2) img{width:100%;}
+
+        .mobile_header a:nth-child(3){width:18px;height:20.25px;}
+        .mobile_header a:nth-child(3) img{width:100%;}
+
+        .mobile_nav{width:10%}
+        .mobile_nav img{width:64px;height:65px;position:fixed;right:0;top:0;}
+        /* section-mobile */
+        /* swiper */
+        .slider img{width: 100%;}
+        .bx-wrapper .bx-pager{background:rgb(145, 120, 99);padding-bottom:6%;}
+    </style>
+    <!-- js -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.slider').bxSlider({
+            auto: true,
+            pause: 4000
+            });
+        });
+        
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="mob_header">
+                <div class="mobile_header">
+                    <a href="#"><img src="images/btn_locate.png" alt="btn_locate"></a>
+                    <a href="#"><img src="images/logo (1).png" alt="모바일 로고"></a>
+                    <a href="#"><img src="images/top_search.png" alt="search"></a>
+                </div>
+                <nav class="mobile_nav">
+                    <img src="images/m_gnb.png" alt="모바일 메뉴">
+                </nav>
+            </div>
+        </header>
+        <section>
+            <div class="slider">
+                <div><img src="images/2019-11-25_event.jpg" alt=""></div>
+                <div><img src="images/2019-8-30_event(1).jpg" alt=""></div>
+                <div><img src="images/2019-6-28_event.jpg" alt=""></div>
+                <div><img src="images/2017-8-7_event(2).jpg" alt=""></div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

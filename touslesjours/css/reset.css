@@ -1,0 +1,27 @@
+@charset "utf-8";
+.clearfix::after{clear: both;content: "";display: block;}
+
+body,header,section,nav,aside,footer,address,
+div,span,img,p,h1,h2,h3,h4,h5,h6,ul,li,ol,dl,dt,dd,
+a,figure,figcaption{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    font-weight: 500;
+    font-family: 'Noto Sans KR',sans-serif;
+    color: #333;
+}
+
+form,button,input,select,option{color: #333;margin: 0;padding: 0;box-sizing: border-box;font-weight: 500;}
+
+ul,li,ol{list-style: none;color: #333;}
+
+div,p,span,li,h1,h2,h3,h4,h5,h6,address,
+a,button,label,select,option{
+    font-family: 'Noto Sans KR',sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+a{text-decoration: none;color: #333;}

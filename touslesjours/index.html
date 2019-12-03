@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TOUSlesJOURS</title>
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="images/favicon.png">
+    <!-- 웹폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800|Noto+Sans+KR:100,300,400,500,700,900&displa<!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>TOUSlesJOURS</title>
+        <!-- 파비콘 -->
+        <link rel="shortcut icon" href="images/favicon.png">
+        <link rel="apple-touch-icon-precomposed" href="images/favicon.png">
+        <!-- 웹폰트 -->
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800|Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">    <!-- css -->
+        <!-- css -->
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/swiper.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+        <style>
+            #wrap{width:100%;}
+            /* header-.mob_header */
+            .mobile_header{background:white;display:flex;width:100%;justify-content:space-between;align-items:center;}
+            .mobile_header a{display:flex;height:65px;}
+            .mobile_header a:nth-child(1){width:57px;height:70px;display:flex;}
+            .mobile_header a:nth-child(1) img{width:100%;}
+            .mobile_header a:nth-child(2){width:146px;height:21px;}
+            .mobile_header a:nth-child(2) img{width:100%;}
+            .mobile_header a:nth-child(3){width:18px;height:20.25px;margin-right:64px;}
+            .mobile_header a:nth-child(3) img{width:100%;}
+            .mobile_nav{width:17.75%}
+            .mobile_nav img{width:64px;height:65px;position:fixed;right:0;top:0;z-index:100;}
+            /* header-.mobile_search */
+            .mobile_search{display:none;}
+            .mobile_search>form{border:1px solid #13523c;display:flex;align-items:center;justify-content:center;}
+            .mobile_search>form input{padding:5px;width:91%;height:30px;border:none;border-right:1px solid #13523c;}
+            .mobile_search>form a{width:9%;display:flex;align-items:center;justify-content:center;}
+            .mobile_search>form i{color:#13523c;}
+            /* section-mobile */
+            /* swiper */
+            .swiper-container {height:100%;}
+            .swiper-slide {
+                text-align: center;
+                font-size: 18px;
+                background: #fff;
+                width: 100%;
+                /* Center slide text vertically */
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                align-items: center;
+                width:50%;}
+            .swiper-slide img{width:100%;display:block;}
+            .swiper-slide a{width:100%;display:block;}
+            .swiper-container>.swiper-pagination{display:none;}
+            .swiper-pagination-bullet{width:13px;height:13px;}
+            .swiper-pagination-bullet-active{background:#fff;}
+            .swiper-pagination{background:rgba(0, 0, 0, 0.4);}
+            .swiper-button-prev,.swiper-button-next{color:#fff;}
+            .swiper-button-next:after, .swiper-button-prev:after{font-size:20px;font-weight:bolder;}
+            .swiper-container-horizontal>.swiper-pagination-bullets{bottom:0;}
+            /* section-.list */
+            .mobile_main_menu{background:#13523c;position:relative;}
+            .bg_deco_zigzag::before{content:"";display:block;position:absolute;top:-2px;left:0;width:100%;height:2px;background:transparent url(images/bg_main_menu_top.png) 0 0 repeat-x;background-size:auto 2px;z-index:99;}
+            .bg_deco_zigzag::after{content:"";display:block;position:absolute;bottom:-2px;left:0;width:100%;height:2px;background:transparent url(images/bg_main_menu_bottom.png) 0 0 repeat-x;background-size:auto 2px;z-index:99;}
+            .list>ul{display:flex;width:100%;}
+            .list>ul>li{width:33.3%;border-right:1px solid #2b6450;}
+            .list>ul>li:last-child{border-right:none;}
+            .list>ul>li>a{height:112px;width:100%;display:flex;justify-content:center;align-items:center;}
+            .list>ul>li>a>img{width:70%;max-width:130px;}
+            /* section-.mobile_recommended_product */
+            .mobile_recommended_product{position:relative;display:flex;flex-direction:column;height:300px;}
+            .section_tit{display:flex;align-items:center;padding:22px 15px 7px;}
+                .mobile_h1{font-size:24px;color:#13523c;margin-right:10px;}
+                .mobile_h2{height:auto;color:#2b6450;}
+            .swiper-container2{position:relative;}
+            .swiper-container2 .swiper-slide>a>div{position:relative;}
+            .sort{margin-top:5%;display: inline-block;position: relative;padding: 0 10px;width:70px;height: 13px;line-height: 15px;font-size: 11px;text-align: center;color: #fff;background-color: #ccbea5;}
+            .sort::before{content: "";display: block;position: absolute;top: 0;left: 0;padding-left: 5px;width: 10px;height: 13px;background: #fff url(images/tag_prd_type.png) 0 0 no-repeat;background-size: auto 13px;}
+            .sort::after{content: "";display: block;position: absolute;top: 0;right: 0;padding-right: 5px;width: 10px;height: 13px;background: #fff url(images/tag_prd_type.png) 100% 0 no-repeat;background-size: auto 13px;}
+            .swiper-container2 img{width:70%;margin:0 auto;max-width:150px;max-height:150px;}
+            .swiper-container2 .swiper_button{position:absolute;top:10px;right:-50px}
+            .swiper-button-prev2,.swiper-button-next2{color:#13523c;}
+            .bg_main_buy_bottom::after{content:"";display:block;position:absolute;bottom:-2px;left:0;width:100%;height:2px;background:transparent;background:url(images/bg_main_buy_bottom.png) 0 0 repeat-x;background-size:auto 2px;}
+            /* fresh_bread_talk */
+            .fresh_bread_talk>img{width:100%;height:100%;display:block;}
+            /* sns */
+            .mobile_sns{background:#f7f0da;}
+            .mobile_sns .section_tit{position:relative;}
+            .mobile_sns i{position:absolute;right:18px;top:28px;font-size:24px;color:#8134009c;}
+            .mobile_sns .swiper-slide{background:#f7f0da;height:200px;}
+            .mobile_sns .swiper-slide a{width:100%;margin:0 auto;}
+            .mobile_sns .swiper-slide a img{max-width:120px;}
+            .mobile_sns .swiper-slide a p{background:#fff;margin:0 auto;width:120px;height:43px;font-size:12px;display:flex;justify-content:center;align-items:center;}
+            /* mobile_info */
+            .mobile_info>a>img{width:100%;height:100%;display:block;}
+            .mobile_info>a:nth-child(1)>img,.mobile_info>a:nth-child(2)>img,.mobile_info>a:nth-child(3)>img{margin-bottom:2px;}
+            /* mobile_notice */
+            .mobile_notice>ul{width:100%;height:50px;display:flex;}
+            .mobile_notice>ul>a{display:flex;align-items:center;text-align:center;}
+            .mobile_notice a:first-child{width:80%;background:#666;}
+            .mobile_notice a:last-child{width:20%;height:100%;background:#424242;}
+            .mobile_notice li{width:100%;color:#fff;}
+            /* footer .foottop */
+            footer .foottop{}
+            .foottop ul{}
+            .foottop li{}
+            .foottop a{}
+            .foottop img{}
+        </style>
+        <!-- js -->
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/swiper.min.js"></script>
+        <script>
+            $(function () {
+                // 모바일 메인배너 Swiper
+                var swiper01 = new Swiper('.swiper-container', {
+                    breakpoints:{
+                    640:{
+                    slidesPerView: 2,
+                    centeredSlides: true,
+                    spaceBetween: 15,
+                    },
+                    850:{
+                        slidesPerView: 3,
+                        centeredSlides: true,
+                        spaceBetween: 15,
+                    },
+                    1350:{
+                        slidesPerView: 4,
+                        centeredSlides: true,
+                        spaceBetween: 15,
+                    }
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    autoplay: {
+                    delay: 3000,
+                    },
+                    loop: true,
+                    navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                    },
+                });
+                // section .section_swiper 모바일 추천제품 슬라이드
+                var swiper02 = new Swiper('.swiper-container2', {
+                    slidesPerView: 'auto',
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    loop:true
+                    });            
+                // section .section_sns
+            });
+        </script>
+    </head>
+    <body>
+        <div id="wrap">
+            <header>
+                <div class="mob_header">
+                    <div class="mobile_header">
+                        <a href="#"><img src="images/btn_locate.png" alt="btn_locate"></a>
+                        <a href="#"><img src="images/logo (1).png" alt="모바일 로고"></a>
+                        <a href="#" class="mobile_search_btn"><img src="images/top_search.png" alt="search"></a>
+                    </div>
+                    <nav class="mobile_nav">
+                        <img src="images/m_gnb.png" alt="모바일 메뉴">
+                    </nav>
+                </div>
+                <div class="mobile_search">
+                    <form action="">
+                        <input type="text" placeholder="제품명을 입력하세요">
+                        <a href="#"><i class="fas fa-search"></i></a>
+                    </form>
+                </div>
+            </header>
+            <section>
+            <div class="mobile_main_banner">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="#"><img src="images/2019-11-25_event.jpg" alt="겨울왕국 이벤트1"></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="images/2019-8-30_event(1).jpg" alt="요기요 이벤트2"></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="images/2019-6-28_event.jpg" alt="예약 이벤트3"></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="images/2017-8-7_event(2).jpg" alt="창업 이벤트4"></a></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+            <div class="mobile_main_menu bg_deco_zigzag">
+                <div class="list">
+                    <ul>
+                        <li><a href="#"><img src="images/btn_menu_product.png" alt="제품안내"></a></li>
+                        <li><a href="#"><img src="images/btn_menu_discount.png" alt="할인혜택소개"></a></li>
+                        <li><a href="#"><img src="images/btn_menu_gift.png" alt="쇼핑몰&케익배달"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mobile_recommended_product">
+                <div class="bg_main_buy_bottom">
+                    <div class="section_tit">
+                        <h1 class="mobile_h1">추천제품</h1>
+                        <h2 class="mobile_h2">Recommended Product</h2>
+                    </div>
+                    <div class="section_swiper">
+                        <div class="swiper-container2">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="images/2019-11-22_event(11).jpg" alt="겨울왕국 2_블루베리화이트">
+                                        <p>겨울왕국 2_블루베리화이트</p>
+                                        <span class="sort">Cake</span>
+                                    </a>    
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="images/2019-11-22_event(14).jpg" alt="엘사_체리 초코">
+                                        <p>엘사_체리 초코</p>
+                                        <span class="sort">Cake</span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="images/2019-9-18_event(4).jpg" alt="볼매 연유크림 브레드">
+                                        <p>볼매 연유크림 브레드</p>
+                                        <span class="sort">Bread</span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="images/2019-9-18_event(15).jpg" alt="옥수수 범벅">
+                                        <p>옥수수 범벅</p>
+                                        <span class="sort">Bread</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next swiper-button-prev2"></div>
+                            <div class="swiper-button-prev swiper-button-next2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fresh_bread_talk">
+                <img src="images/img_fresh_bread_talk2.jpg" alt="속 편하게, 맛있게, 오늘도 잘 먹었습니다.">
+            </div>
+            <div class="mobile_sns">
+                <div class="section_tit">
+                    <h1 class="mobile_h1">뚜레쥬르 SNS</h1>
+                    <h2 class="mobile_h2">TLJ sns</h2>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </div>
+                <div class="section_swiper">
+                    <div class="swiper-container2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="images/sns01.jpg" alt="sns01">
+                                    <p>겨울왕국 2_블루베리화이트</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="images/sns02.jpg" alt="sns02">
+                                    <p>엘사_체리 초코</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="images/sns03.jpg" alt="sns03">
+                                    <p>볼매 연유크림 브레드</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="images/sns04.jpg" alt="sns04">
+                                    <p>옥수수 범벅</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next swiper-button-prev2"></div>
+                        <div class="swiper-button-prev swiper-button-next2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile_info">
+                <a href="#">
+                    <img src="images/kakaoplus.png" alt="모바일 카카오톡 플러스친구">
+                </a>
+                <a href="#">
+                    <img src="images/foundation.png" alt="모바일 창업 안내">
+                </a>
+                <a href="#">
+                    <img src="images/recruit.png" alt="모바일 기사채용안내">
+                </a>       
+            </div>
+            <div class="mobile_notice">
+                <ul>
+                    <a href="#"><li>CJ푸드빌 개인정보처리방침 개정 공지</li></a>
+                    <a href="#"><li><i class="fas fa-plus"></i></li></a>
+                </ul>
+            </div>
+            </section>
+            <footer>
+                <div class="foottop">
+                    <ul class="clearfix">
+                        <li>
+                            <a href="#">
+                                <img src="images/img_totalbrand_02.png" alt="VIPS">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/img_totalbrand_08.png" alt="제일제면소">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/img_totalbrand_10.png" alt="BURGER VIPS">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/img_totalbrand_10.png" alt="BURGER VIPS">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/img_totalbrand_10.png" alt="BURGER VIPS">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/img_totalbrand_10.png" alt="BURGER VIPS">
+                            </a>
+                        </li>
+            
+                    </ul>    
+                </div>
+                <div class="footbottom">
+
+                </div>
+            </footer>
+        </div>
+    </body>
+    </html>
