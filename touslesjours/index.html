@@ -9,292 +9,290 @@
     <link rel="shortcut icon" href="images/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="images/favicon.png">
     <!-- 웹폰트 -->
-    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800|Noto+Sans+KR:100,300,400,500,700,900&displa<!DOCTYPE html>
-    <html lang="ko">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>TOUSlesJOURS</title>
-        <!-- 파비콘 -->
-        <link rel="shortcut icon" href="images/favicon.png">
-        <link rel="apple-touch-icon-precomposed" href="images/favicon.png">
-        <!-- 웹폰트 -->
-        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800|Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">    <!-- css -->
-        <!-- css -->
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/swiper.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
-        <style>
-            #wrap{width:100%;}
-            /* header-.mob_header */
-            .mobile_header{background:white;display:flex;width:100%;justify-content:space-between;align-items:center;}
-            .mobile_header a{display:flex;height:65px;}
-            .mobile_header a:nth-child(1){width:57px;height:70px;display:flex;}
-            .mobile_header a:nth-child(1) img{width:100%;}
-            .mobile_header a:nth-child(2){width:146px;height:21px;}
-            .mobile_header a:nth-child(2) img{width:100%;}
-            .mobile_header a:nth-child(3){width:18px;height:20.25px;margin-right:64px;}
-            .mobile_header a:nth-child(3) img{width:100%;}
-            .mobile_nav{width:17.75%}
-            .mobile_nav img{width:64px;height:65px;position:fixed;right:0;top:0;z-index:100;}
-            /* header-.mobile_search */
-            .mobile_search{display:none;}
-            .mobile_search>form{border:1px solid #13523c;display:flex;align-items:center;justify-content:center;}
-            .mobile_search>form input{padding:5px;width:91%;height:30px;border:none;border-right:1px solid #13523c;}
-            .mobile_search>form a{width:9%;display:flex;align-items:center;justify-content:center;}
-            .mobile_search>form i{color:#13523c;}
-            /* section-mobile */
-            /* swiper */
-            .swiper-container {height:100%;}
-            .swiper-slide {
-                text-align: center;
-                font-size: 18px;
-                background: #fff;
-                width: 100%;
-                /* Center slide text vertically */
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: -webkit-flex;
-                display: flex;
-                -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                -webkit-justify-content: center;
-                justify-content: center;
-                -webkit-box-align: center;
-                -ms-flex-align: center;
-                -webkit-align-items: center;
-                align-items: center;
-                width:50%;}
-            .swiper-slide img{width:100%;display:block;}
-            .swiper-slide a{width:100%;display:block;}
-            .swiper-container>.swiper-pagination{display:none;}
-            .swiper-pagination-bullet{width:13px;height:13px;}
-            .swiper-pagination-bullet-active{background:#fff;}
-            .swiper-pagination{background:rgba(0, 0, 0, 0.4);}
-            .swiper-button-prev,.swiper-button-next{color:#fff;}
-            .swiper-button-next:after, .swiper-button-prev:after{font-size:20px;font-weight:bolder;}
-            .swiper-container-horizontal>.swiper-pagination-bullets{bottom:0;}
-            /* section-.list */
-            .mobile_main_menu{background:#13523c;position:relative;}
-            .bg_deco_zigzag::before{content:"";display:block;position:absolute;top:-2px;left:0;width:100%;height:2px;background:transparent url(images/bg_main_menu_top.png) 0 0 repeat-x;background-size:auto 2px;z-index:99;}
-            .bg_deco_zigzag::after{content:"";display:block;position:absolute;bottom:-2px;left:0;width:100%;height:2px;background:transparent url(images/bg_main_menu_bottom.png) 0 0 repeat-x;background-size:auto 2px;z-index:99;}
-            .list>ul{display:flex;width:100%;}
-            .list>ul>li{width:33.3%;border-right:1px solid #2b6450;}
-            .list>ul>li:last-child{border-right:none;}
-            .list>ul>li>a{height:112px;width:100%;display:flex;justify-content:center;align-items:center;}
-            .list>ul>li>a>img{width:70%;max-width:130px;}
-            /* section-.mobile_recommended_product */
-            .mobile_recommended_product{position:relative;display:flex;flex-direction:column;height:300px;}
-            .section_tit{display:flex;align-items:center;padding:22px 15px 7px;}
-                .mobile_h1{font-size:24px;color:#13523c;margin-right:10px;}
-                .mobile_h2{height:auto;color:#2b6450;}
-            .swiper-container2{position:relative;}
-            .swiper-container2 .swiper-slide>a>div{position:relative;}
-            .sort{margin-top:5%;display: inline-block;position: relative;padding: 0 10px;width:70px;height: 13px;line-height: 15px;font-size: 11px;text-align: center;color: #fff;background-color: #ccbea5;}
-            .sort::before{content: "";display: block;position: absolute;top: 0;left: 0;padding-left: 5px;width: 10px;height: 13px;background: #fff url(images/tag_prd_type.png) 0 0 no-repeat;background-size: auto 13px;}
-            .sort::after{content: "";display: block;position: absolute;top: 0;right: 0;padding-right: 5px;width: 10px;height: 13px;background: #fff url(images/tag_prd_type.png) 100% 0 no-repeat;background-size: auto 13px;}
-            .swiper-container2 img{width:70%;margin:0 auto;max-width:150px;max-height:150px;}
-            .swiper-container2 .swiper_button{position:absolute;top:10px;right:-50px}
-            .swiper-button-prev2,.swiper-button-next2{color:#13523c;}
-            .bg_main_buy_bottom::after{content:"";display:block;position:absolute;bottom:-2px;left:0;width:100%;height:2px;background:transparent;background:url(images/bg_main_buy_bottom.png) 0 0 repeat-x;background-size:auto 2px;}
-            /* fresh_bread_talk */
-            .fresh_bread_talk>img{width:100%;height:100%;display:block;}
-            /* sns */
-            .mobile_sns{background:#f7f0da;}
-            .mobile_sns .section_tit{position:relative;}
-            .mobile_sns i{position:absolute;right:18px;top:28px;font-size:24px;color:#8134009c;}
-            .mobile_sns .swiper-slide{background:#f7f0da;height:200px;}
-            .mobile_sns .swiper-slide a{width:100%;margin:0 auto;}
-            .mobile_sns .swiper-slide a img{max-width:120px;}
-            .mobile_sns .swiper-slide a p{background:#fff;margin:0 auto;width:120px;height:43px;font-size:12px;display:flex;justify-content:center;align-items:center;}
-            /* mobile_info */
-            .mobile_info>a>img{width:100%;height:100%;display:block;}
-            .mobile_info>a:nth-child(1)>img,.mobile_info>a:nth-child(2)>img,.mobile_info>a:nth-child(3)>img{margin-bottom:2px;}
-            /* mobile_notice */
-            .mobile_notice>ul{width:100%;height:50px;display:flex;}
-            .mobile_notice>ul>a{display:flex;align-items:center;text-align:center;}
-            .mobile_notice a:first-child{width:80%;background:#666;}
-            .mobile_notice a:last-child{width:20%;height:100%;background:#424242;}
-            .mobile_notice li{width:100%;color:#fff;}
-            /* footer .foottop */
-            footer .foottop{}
-            .foottop ul{}
-            .foottop li{}
-            .foottop a{}
-            .foottop img{}
-        </style>
-        <!-- js -->
-        <script src="js/jquery-3.4.1.min.js"></script>
-        <script src="js/swiper.min.js"></script>
-        <script>
-            $(function () {
-                // 모바일 메인배너 Swiper
-                var swiper01 = new Swiper('.swiper-container', {
-                    breakpoints:{
-                    640:{
-                    slidesPerView: 2,
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800|Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">    <!-- css -->
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+    <style>
+        #wrap{width:100%;}
+        /* header-.mob_header */
+        .mobile_header{background:white;display:flex;width:100%;justify-content:space-between;align-items:center;}
+        .mobile_header a{display:flex;height:65px;}
+        .mobile_header a:nth-child(1){width:57px;height:70px;display:flex;}
+        .mobile_header a:nth-child(1) img{width:100%;}
+
+        .mobile_header a:nth-child(2){width:146px;height:21px;}
+        .mobile_header a:nth-child(2) img{width:100%;}
+
+        .mobile_header a:nth-child(3){width:18px;height:20.25px;margin-right:64px;}
+        .mobile_header a:nth-child(3) img{width:100%;}
+
+        .mobile_nav{width:17.75%}
+        .mobile_nav img{width:64px;height:65px;position:fixed;right:0;top:0;z-index:100;}
+        /* header-.mobile_search */
+        .mobile_search{display:none;}
+        .mobile_search>form{border:1px solid #13523c;display:flex;align-items:center;justify-content:center;}
+        .mobile_search>form input{padding:5px;width:91%;height:30px;border:none;border-right:1px solid #13523c;}
+        .mobile_search>form a{width:9%;display:flex;align-items:center;justify-content:center;}
+        .mobile_search>form i{color:#13523c;}
+        /* section-mobile */
+        /* swiper */
+        .swiper-container {height:100%;}
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            width: 100%;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            width:50%;}
+        .swiper-slide img{width:100%;display:block;}
+        .swiper-slide a{width:100%;display:block;}
+        .swiper-container>.swiper-pagination{display:none;}
+        .swiper-pagination-bullet{width:13px;height:13px;}
+        .swiper-pagination-bullet-active{background:#fff;}
+        .swiper-pagination{background:rgba(0, 0, 0, 0.4);}
+        .swiper-button-prev,.swiper-button-next{color:#fff;}
+        .swiper-button-next:after, .swiper-button-prev:after{font-size:20px;font-weight:bolder;}
+        .swiper-container-horizontal>.swiper-pagination-bullets{bottom:0;}
+        /* section-.list */
+        .mobile_main_menu{background:#13523c;position:relative;}
+        .bg_deco_zigzag::before{content:"";display:block;position:absolute;top:-2px;left:0;width:100%;height:2px;background:transparent url(images/bg_main_menu_top.png) 0 0 repeat-x;background-size:auto 2px;z-index:99;}
+        .bg_deco_zigzag::after{content:"";display:block;position:absolute;bottom:-2px;left:0;width:100%;height:2px;background:transparent url(images/bg_main_menu_bottom.png) 0 0 repeat-x;background-size:auto 2px;z-index:99;}
+        .list>ul{display:flex;width:100%;}
+        .list>ul>li{width:33.3%;border-right:1px solid #2b6450;}
+        .list>ul>li:last-child{border-right:none;}
+        .list>ul>li>a{height:112px;width:100%;display:flex;justify-content:center;align-items:center;}
+        .list>ul>li>a>img{width:70%;max-width:130px;}
+        /* section-.mobile_recommended_product */
+        .mobile_recommended_product{position:relative;display:flex;flex-direction:column;height:300px;}
+        .section_tit{display:flex;align-items:center;padding:22px 15px 7px;}
+            .mobile_h1{font-size:24px;color:#13523c;margin-right:10px;}
+            .mobile_h2{height:auto;color:#2b6450;}
+        .swiper-container2{position:relative;overflow:hidden;}
+        .swiper-container2 .swiper-slide>a>div{position:relative;}
+        .sort{margin-top:5%;display: inline-block;position: relative;padding: 0 10px;width:70px;height: 13px;line-height: 15px;font-size: 11px;text-align: center;color: #fff;background-color: #ccbea5;}
+        .sort::before{content: "";display: block;position: absolute;top: 0;left: 0;padding-left: 5px;width: 10px;height: 13px;background: #fff url(images/tag_prd_type.png) 0 0 no-repeat;background-size: auto 13px;}
+        .sort::after{content: "";display: block;position: absolute;top: 0;right: 0;padding-right: 5px;width: 10px;height: 13px;background: #fff url(images/tag_prd_type.png) 100% 0 no-repeat;background-size: auto 13px;}
+        .swiper-container2 img{width:70%;margin:0 auto;max-width:150px;max-height:150px;}
+        .swiper-container2 .swiper_button{position:absolute;top:10px;right:-50px}
+        .swiper-button-prev2,.swiper-button-next2{color:#13523c;}
+        .bg_main_buy_bottom::after{content:"";display:block;position:absolute;bottom:-2px;left:0;width:100%;height:2px;background:transparent;background:url(images/bg_main_buy_bottom.png) 0 0 repeat-x;background-size:auto 2px;}
+        /* fresh_bread_talk */
+        .mobile_fresh_bread_talk>img{width:100%;height:100%;display:block;}
+        /* sns */
+        .sns{background:#f7f0da;position:relative;}
+        .sns i{position:absolute;right:18px;top:28px;font-size:24px;color:#8134009c;}
+        .sns .swiper-slide{background:#f7f0da;height:200px;}
+        .sns .swiper-slide a{width:100%;margin:0 auto;}
+        .sns .swiper-slide a img{max-width:120px;}
+        .sns .swiper-slide a p{background:#fff;margin:0 auto;width:120px;height:43px;font-size:12px;text-align:center;padding:3px 10px 5px;}
+        .sns::before{content:"";display:block;position:absolute;top:-2px;left:0;width:100%;height:2px;background:transparent url(images/bg_main_sns_top.png) 0 0 repeat-x;background-size:auto 2px;}
+        /* mobile_info */
+        .mobile_info>a>img{width:100%;height:100%;display:block;}
+        .mobile_info>a:nth-child(1)>img,.mobile_info>a:nth-child(2)>img,.mobile_info>a:nth-child(3)>img{margin-bottom:2px;}
+        /* mobile_notice */
+        .mobile_notice>ul{width:100%;height:50px;display:flex;}
+        .mobile_notice>ul>a{display:flex;align-items:center;text-align:center;}
+        .mobile_notice a:first-child{width:80%;background:#666;}
+        .mobile_notice a:last-child{width:20%;height:100%;background:#424242;}
+        .mobile_notice li{width:100%;color:#fff;}
+        /* footer .foottop */
+        footer .foottop{}
+        .foottop div:first-child{display:flex;justify-content:center;align-items:center;}
+        .foottop div:first-child div{background:#3a3b3a;text-align:center;height:50px;}
+        .foottop div:first-child div:first-child{width:50%;border-right:1px solid #666;}
+        .foottop i{color:#fff;}
+        .foottop div:first-child div:last-child{width:50%;line-height:50px;cursor:pointer;color:#fff;}
+
+        .brand{display:none;}
+        .foottop ul{display:flex;flex-flow:row wrap;justify-content:center;}
+        .foottop ul>li{width:20%;height:50px;border-right:1px solid #ccc;border-bottom:1px solid #ccc;}
+        .foottop li:nth-child(5),.foottop li:nth-child(10){border-right:none;}
+        .foottop a{width:100%;height:100%;display:flex;align-items:center;justify-content:center;}
+        .foottop img{width:65%;max-width:70px;}
+        /* footer .footbottom */
+        .footbottom{background:#333;}
+        .footbottom>ul{display:flex;justify-content:center;align-items:center;}
+        .footbottom>ul>li{margin:15px 20px 15px 0;}
+        .footbottom>ul a,.footbottom>p{color:#fff;font-weight:200;font-size:12px;}
+        .footbottom>ul li:first-child>a{color:#f26b24}
+        .footbottom>p{padding:0 0 10px 20px;}
+
+        /* 모바일 전체 메뉴 .mobile_nav_btn */
+        .mobile_nav_btn{width:800px;height:100%;background:#111;}
+    </style>
+    <!-- js -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script>
+        $(function () {
+            // header search_btn
+            $('.mobile_search_btn').on('click',function(){
+                $('.mobile_search').slideToggle();
+            })
+            // header .mobile_nav
+
+            // 모바일 메인배너 Swiper
+            var swiper01 = new Swiper('.swiper-container', {
+                breakpoints:{
+                450:{
+                slidesPerView: 2,
+                centeredSlides: true,
+                spaceBetween: 15,
+                },
+                850:{
+                    slidesPerView: 3,
                     centeredSlides: true,
                     spaceBetween: 15,
-                    },
-                    850:{
-                        slidesPerView: 3,
-                        centeredSlides: true,
-                        spaceBetween: 15,
-                    },
-                    1350:{
-                        slidesPerView: 4,
-                        centeredSlides: true,
-                        spaceBetween: 15,
-                    }
-                    },
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                    },
-                    autoplay: {
-                    delay: 3000,
-                    },
-                    loop: true,
-                    navigation: {
+                },
+                1100:{
+                    slidesPerView: 4,
+                    centeredSlides: true,
+                    spaceBetween: 15,
+                }
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                autoplay: {
+                delay: 3000,
+                },
+                loop: true,
+                navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+                },
+            });
+            // section .section_swiper 모바일 추천제품 슬라이드
+            var swiper02 = new Swiper('.swiper-container2', {
+                breakpoints:{
+                360:{
+                slidesPerView: 2,
+                spaceBetween: 15,
+                },
+                600:{
+                    slidesPerView: 2,
+                    spaceBetween: 15,
+                },
+                1000:{
+                    slidesPerView: 4,
+                    spaceBetween: 15,
+                }
+                },
+                navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
-                    },
-                });
-                // section .section_swiper 모바일 추천제품 슬라이드
-                var swiper02 = new Swiper('.swiper-container2', {
-                    slidesPerView: 'auto',
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-                    loop:true
-                    });            
-                // section .section_sns
-            });
-        </script>
-    </head>
-    <body>
-        <div id="wrap">
-            <header>
-                <div class="mob_header">
-                    <div class="mobile_header">
-                        <a href="#"><img src="images/btn_locate.png" alt="btn_locate"></a>
-                        <a href="#"><img src="images/logo (1).png" alt="모바일 로고"></a>
-                        <a href="#" class="mobile_search_btn"><img src="images/top_search.png" alt="search"></a>
-                    </div>
-                    <nav class="mobile_nav">
-                        <img src="images/m_gnb.png" alt="모바일 메뉴">
-                    </nav>
+                },
+                loop:true
+                });            
+            // footer .foottop open_brand_btn
+            $('.open_brand_btn').on('click',function(){
+                $('.brand').slideToggle();
+                if($('.brand').height()>30){
+                    $('.open_brand_btn').css('background','#3a3b3a');
+                }else{
+                    $('.open_brand_btn').css('background','#000');
+                }
+            })
+
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="mob_header">
+                <div class="mobile_header">
+                    <a href="#"><img src="images/btn_locate.png" alt="btn_locate"></a>
+                    <a href="#"><img src="images/logo (1).png" alt="모바일 로고"></a>
+                    <a href="#" class="mobile_search_btn"><img src="images/top_search.png" alt="search"></a>
                 </div>
-                <div class="mobile_search">
-                    <form action="">
-                        <input type="text" placeholder="제품명을 입력하세요">
-                        <a href="#"><i class="fas fa-search"></i></a>
-                    </form>
-                </div>
-            </header>
-            <section>
-            <div class="mobile_main_banner">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><a href="#"><img src="images/2019-11-25_event.jpg" alt="겨울왕국 이벤트1"></a></div>
-                        <div class="swiper-slide"><a href="#"><img src="images/2019-8-30_event(1).jpg" alt="요기요 이벤트2"></a></div>
-                        <div class="swiper-slide"><a href="#"><img src="images/2019-6-28_event.jpg" alt="예약 이벤트3"></a></div>
-                        <div class="swiper-slide"><a href="#"><img src="images/2017-8-7_event(2).jpg" alt="창업 이벤트4"></a></div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                <div class="mobile_nav">
+                    <img src="images/m_gnb.png" alt="모바일 메뉴">
                 </div>
             </div>
-            <div class="mobile_main_menu bg_deco_zigzag">
-                <div class="list">
-                    <ul>
-                        <li><a href="#"><img src="images/btn_menu_product.png" alt="제품안내"></a></li>
-                        <li><a href="#"><img src="images/btn_menu_discount.png" alt="할인혜택소개"></a></li>
-                        <li><a href="#"><img src="images/btn_menu_gift.png" alt="쇼핑몰&케익배달"></a></li>
-                    </ul>
+            <div class="mobile_search">
+                <form action="">
+                    <input type="text" placeholder="제품명을 입력하세요">
+                    <a href="#"><i class="fas fa-search"></i></a>
+                </form>
+            </div>
+        </header>
+        <!-- 헤더 끝 -->
+        <section>
+        <article class="mobile_main_banner">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href="#"><img src="images/2019-11-25_event.jpg" alt="겨울왕국 이벤트1"></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="images/2019-8-30_event(1).jpg" alt="요기요 이벤트2"></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="images/2019-6-28_event.jpg" alt="예약 이벤트3"></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="images/2017-8-7_event(2).jpg" alt="창업 이벤트4"></a></div>
                 </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
-            <div class="mobile_recommended_product">
-                <div class="bg_main_buy_bottom">
-                    <div class="section_tit">
-                        <h1 class="mobile_h1">추천제품</h1>
-                        <h2 class="mobile_h2">Recommended Product</h2>
-                    </div>
-                    <div class="section_swiper">
-                        <div class="swiper-container2">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <a href="#">
-                                        <img src="images/2019-11-22_event(11).jpg" alt="겨울왕국 2_블루베리화이트">
-                                        <p>겨울왕국 2_블루베리화이트</p>
-                                        <span class="sort">Cake</span>
-                                    </a>    
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#">
-                                        <img src="images/2019-11-22_event(14).jpg" alt="엘사_체리 초코">
-                                        <p>엘사_체리 초코</p>
-                                        <span class="sort">Cake</span>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#">
-                                        <img src="images/2019-9-18_event(4).jpg" alt="볼매 연유크림 브레드">
-                                        <p>볼매 연유크림 브레드</p>
-                                        <span class="sort">Bread</span>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#">
-                                        <img src="images/2019-9-18_event(15).jpg" alt="옥수수 범벅">
-                                        <p>옥수수 범벅</p>
-                                        <span class="sort">Bread</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="swiper-button-next swiper-button-prev2"></div>
-                            <div class="swiper-button-prev swiper-button-next2"></div>
-                        </div>
-                    </div>
-                </div>
+        </article>
+        <!-- 메인배너 끝 -->
+        <article class="mobile_main_menu bg_deco_zigzag">
+            <div class="list">
+                <ul>
+                    <li><a href="#"><img src="images/btn_menu_product.png" alt="제품안내"></a></li>
+                    <li><a href="#"><img src="images/btn_menu_discount.png" alt="할인혜택소개"></a></li>
+                    <li><a href="#"><img src="images/btn_menu_gift.png" alt="쇼핑몰&케익배달"></a></li>
+                </ul>
             </div>
-            <div class="fresh_bread_talk">
-                <img src="images/img_fresh_bread_talk2.jpg" alt="속 편하게, 맛있게, 오늘도 잘 먹었습니다.">
-            </div>
-            <div class="mobile_sns">
+        </article>
+        <!-- 모바일 중간 list 끝 -->
+        <article class="mobile_recommended_product">
+            <div class="bg_main_buy_bottom">
                 <div class="section_tit">
-                    <h1 class="mobile_h1">뚜레쥬르 SNS</h1>
-                    <h2 class="mobile_h2">TLJ sns</h2>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <h1 class="mobile_h1">추천제품</h1>
+                    <h2 class="mobile_h2">Recommended Product</h2>
                 </div>
                 <div class="section_swiper">
                     <div class="swiper-container2">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <a href="#">
-                                    <img src="images/sns01.jpg" alt="sns01">
+                                    <img src="images/2019-11-22_event(11).jpg" alt="겨울왕국 2_블루베리화이트">
                                     <p>겨울왕국 2_블루베리화이트</p>
-                                </a>
+                                    <span class="sort">Cake</span>
+                                </a>    
                             </div>
                             <div class="swiper-slide">
                                 <a href="#">
-                                    <img src="images/sns02.jpg" alt="sns02">
+                                    <img src="images/2019-11-22_event(14).jpg" alt="엘사_체리 초코">
                                     <p>엘사_체리 초코</p>
+                                    <span class="sort">Cake</span>
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="#">
-                                    <img src="images/sns03.jpg" alt="sns03">
+                                    <img src="images/2019-9-18_event(4).jpg" alt="볼매 연유크림 브레드">
                                     <p>볼매 연유크림 브레드</p>
+                                    <span class="sort">Bread</span>
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="#">
-                                    <img src="images/sns04.jpg" alt="sns04">
+                                    <img src="images/2019-9-18_event(15).jpg" alt="옥수수 범벅">
                                     <p>옥수수 범벅</p>
+                                    <span class="sort">Bread</span>
                                 </a>
                             </div>
                         </div>
@@ -303,27 +301,86 @@
                     </div>
                 </div>
             </div>
-            <div class="mobile_info">
-                <a href="#">
-                    <img src="images/kakaoplus.png" alt="모바일 카카오톡 플러스친구">
-                </a>
-                <a href="#">
-                    <img src="images/foundation.png" alt="모바일 창업 안내">
-                </a>
-                <a href="#">
-                    <img src="images/recruit.png" alt="모바일 기사채용안내">
-                </a>       
+        </article>
+        <!-- 모바일 추천제품 끝 -->
+        <article class="mobile_fresh_bread_talk">
+            <img src="images/img_fresh_bread_talk2.jpg" alt="속 편하게, 맛있게, 오늘도 잘 먹었습니다.">
+        </article>
+        <!-- 모바일 365일 속편하게 맛있게 광고 끝 -->
+        <article class="sns">
+            <div class="section_tit">
+                <h1 class="mobile_h1">뚜레쥬르 SNS</h1>
+                <h2 class="mobile_h2">TLJ sns</h2>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
             </div>
-            <div class="mobile_notice">
-                <ul>
-                    <a href="#"><li>CJ푸드빌 개인정보처리방침 개정 공지</li></a>
-                    <a href="#"><li><i class="fas fa-plus"></i></li></a>
-                </ul>
+            <div class="section_swiper">
+                <div class="swiper-container2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/sns01.jpg" alt="sns01">
+                                <p>기대감 폭발하는 <백두산>과 함께…</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/sns02.jpg" alt="sns02">
+                                <p>신선하고 맛있는 뚜레쥬르 빵…</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/sns03.jpg" alt="sns03">
+                                <p>추운 겨울이면 생각나는 그녀!</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/sns04.jpg" alt="sns04">
+                                <p>뚜레쥬르에서 만나는 겨울왕국 2…</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next swiper-button-prev2"></div>
+                    <div class="swiper-button-prev swiper-button-next2"></div>
+                </div>
             </div>
-            </section>
-            <footer>
-                <div class="foottop">
-                    <ul class="clearfix">
+        </article>
+        <!-- 모바일 sns 끝 -->
+        <article class="mobile_info">
+            <a href="#">
+                <img src="images/kakaoplus.png" alt="모바일 카카오톡 플러스친구">
+            </a>
+            <a href="#">
+                <img src="images/foundation.png" alt="모바일 창업 안내">
+            </a>
+            <a href="#">
+                <img src="images/recruit.png" alt="모바일 기사채용안내">
+            </a>       
+        </article>
+        <!-- 모바일 카톡플친/창업안내/기사채용 광고 끝 -->
+        <article class="mobile_notice">
+            <ul>
+                <a href="#"><li>CJ푸드빌 개인정보처리방침 개정 공지</li></a>
+                <a href="#"><li><i class="fas fa-plus"></i></li></a>
+            </ul>
+        </article>
+        <!-- 모바일 공지 끝 -->
+        </section>
+        <!-- 섹션 끝 -->
+        <footer>
+            <div class="foottop">
+                <div>
+                    <div>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    <div class="open_brand_btn">
+                        <i class="fas fa-list"></i>
+                        전체브랜드 List
+                    </div>
+                </div>
+                <div class="brand">
+                    <ul>
                         <li>
                             <a href="#">
                                 <img src="images/img_totalbrand_02.png" alt="VIPS">
@@ -341,26 +398,92 @@
                         </li>
                         <li>
                             <a href="#">
-                                <img src="images/img_totalbrand_10.png" alt="BURGER VIPS">
+                                <img src="images/img_totalbrand_11.png" alt="CJ푸드빌">
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="images/img_totalbrand_10.png" alt="BURGER VIPS">
+                                <img src="images/img_totalbrand_13.png" alt="THEPLACE">
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="images/img_totalbrand_10.png" alt="BURGER VIPS">
+                                <img src="images/img_totalbrand_14.png" alt="계절밥상">
                             </a>
                         </li>
-            
+                        <li>
+                            <a href="#">
+                                <img src="images/img_totalbrand_18.png" alt="nGRILL">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/img_totalbrand_19.png" alt="N SEOUL TOWER">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/img_totalbrand_20.png" alt="CJ FOODWORLD">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/img_totalbrand_23.png" alt="BUSAN TOWER">
+                            </a>
+                        </li>
                     </ul>    
                 </div>
-                <div class="footbottom">
-
-                </div>
-            </footer>
+            </div>
+            <div class="footbottom">
+                <ul>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">이메일무단수집거부</a></li>
+                    <li><a href="#">법적고지</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                </ul>
+                <p>
+                    (우)04555 서울시 중구 마른내로34(초동 106-9번지)KT&G을지로타워 3-5/8-11층 CJ푸드빌(주)<br>
+                    대표이사:정성필 | 고객센터 :1577-0700 | 팩스(02)6740-4349<br>
+                    통신판매업종신고증 제 2011-서울중구-0771호 사업자정보확인<br>
+                    호스팅제공자 :CJ올리브네트웍스(주)<br>
+                    사업자등록번호 :312-81-42519개인정보보호책임자 :변희성<br>
+                    대표이메일 : help_master@cj.net<br>
+                    <br>
+                    COPYRIGHT 2019©CJ Foodville ALL RIGHT RESERVED.
+                </p>
+            </div>
+        </footer>
+        <!-- 푸터 끝 -->
+    </div>
+    <!-- wrap 끝 -->
+    <!-- 모바일 전체 메뉴 .mobile_nav_btn 시작 -->
+    <div class="mobile_nav_btn">
+        <div class="mobile_menu_header">
+            <div>안녕하세요. 뚜레쥬르입니다.</div>
+            <div>로그인</div>
         </div>
-    </body>
-    </html>
+        <div class="mobile_menu_middle">
+            <img src="" alt="모바일 전체 메뉴 로고">
+            <div>
+                <div>
+                    <img src="" alt="상품권 이미지">
+                    상품권 선물하기
+                </div>
+                <div>
+                    <img src="" alt="이벤트 이미지">
+                    이벤트
+                </div>
+            </div>
+            <div>
+                <img src="" alt="쇼핑몰 가기">
+                뚜레쥬르 쇼핑몰 가기
+            </div>
+        </div>
+        <div class="mobile_menu_bottom">
+            브랜드 스토리
+            <i class="fas fa-plus"></i>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,5 +1,5 @@
 @charset "utf-8";
-.clearfix::after{clear: both;content: "";display: block;}
+.clearfix::after{clear: both;content: "";display: block;overflow: hidden;}
 
 body,header,section,nav,aside,footer,address,
 div,span,img,p,h1,h2,h3,h4,h5,h6,ul,li,ol,dl,dt,dd,
